@@ -86,6 +86,6 @@ set nobackup
 """
 " Keyboard shortcuts
 """
-map ^P :set nu!<CR>:set relativenumber!<CR>
+map  :set nu!<CR>:set relativenumber!<CR>
 
 
