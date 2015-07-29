@@ -83,3 +83,9 @@ set softtabstop=4
 let $PAGER=''
 set nobackup
 
+"""
+" Keyboard shortcuts
+"""
+map ^P :set nu!<CR>:set relativenumber!<CR>
+
+
