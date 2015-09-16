@@ -36,6 +36,11 @@ set undoreload=10000000
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
+" molokai colorscheme
+"""
+Bundle 'tomasr/molokai'
+
+"""
 " tagbar
 """
 Bundle 'majutsushi/tagbar'
