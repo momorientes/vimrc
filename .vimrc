@@ -12,7 +12,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
 """"""""""""""""""""""""""""""""""""""""""''
 
 """
@@ -60,7 +59,10 @@ let g:airline_powerline_fonts = 1
 """
 Plugin 'ervandew/supertab'
 
-
+"""
+" snipmate
+""""
+Plugin 'msanders/snipmate.vim'
 
 """
 " interface shit
@@ -77,7 +79,6 @@ set cursorcolumn
 """
 " formatting shit
 """
-" filetype plugin indent on
 set expandtab
 set tabstop=4
 set shiftwidth=4
