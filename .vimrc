@@ -60,11 +60,6 @@ let g:airline_powerline_fonts = 1
 Plugin 'ervandew/supertab'
 
 """
-" snipmate
-""""
-Plugin 'msanders/snipmate.vim'
-
-"""
 " interface shit
 """
 colorscheme molokai
