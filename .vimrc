@@ -40,11 +40,22 @@ Plugin 'ervandew/supertab'
 
 Plugin 'itchyny/lightline.vim'
 set noshowmode
+set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'flattened_dark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
       \ }
 
+Plugin 'tpope/vim-fugitive'
+
 colorscheme flattened_dark
+set background=dark
 syntax on
 set number
 set relativenumber
@@ -75,4 +86,3 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
