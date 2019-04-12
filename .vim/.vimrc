@@ -35,8 +35,16 @@ set undoreload=10000000
 Bundle 'klen/python-mode'
 let g:pymode_rope_completion = 1
 
+Plugin 'ervandew/supertab'
 
-colorscheme molokai
+
+Plugin 'itchyny/lightline.vim'
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'flattened_dark',
+      \ }
+
+colorscheme flattened_dark
 syntax on
 set number
 set relativenumber
@@ -57,3 +65,14 @@ au BufWinEnter * silent! loadview
 " LaTeX Implementation
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+
+
+map ^P :set nu!<CR>:set relativenumber!<CR>
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
