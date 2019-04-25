@@ -67,6 +67,8 @@ set softtabstop=4
 set ruler
 let $PAGER=''
 set nobackup
+set cursorline
+set cursorcolumn
 filetype plugin indent on
 
 "vim save folding
